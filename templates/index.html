@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<title> Data Collector App</title>
+<head>
+	<link rel="stylesheet" type="text/css" href="../static/main.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Collecting heights</h1>
+		<h3>Please fill the entries to get population statistics on heights</h3>
+		{% for category, msg in get_flashed_messages(with_categories=True) %}
+					<div class="message-{{category}}">{{msg}}</div>
+		{% endfor %}
+		<form action="{{url_for('success')}}" method="POST">
+			<input title="Your email will be safe with us" placeholder="Enter your email" type="email" name="email_name" required><br>
+			<input title="Your data will be safe with us" placeholder="Enter your height in cm" type="number" min="30" max="300" name="height_name" required><br>
+			<button type="submit">Submit</button>
+		</form>
+		
+	</div>
+</body>
+</html>
