@@ -18,6 +18,7 @@ def send(email, height, average, count):
    gmail = smtplib.SMTP('smtp.gmail.com', 587)
    gmail.ehlo()
    gmail.starttls()
+   gmail.ehlo()
    gmail.login(from_email, from_password)
    gmail.send_message(msg)
 
