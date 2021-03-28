@@ -10,7 +10,11 @@ from sqlalchemy.sql import func
 app = Flask(__name__)
 app.secret_key = 'heightcheck'
 # app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:postgres123@localhost/height_calculator'
+<<<<<<< HEAD
 app.config['SQLALCHEMY_DATABASE_URI']='postgres://myxbyvdzbwswrh:cd00391eb7d06563800ca77f52337373cbba2f318c5837a6afb5ef8fec13fa73@ec2-54-167-168-52.compute-1.amazonaws.com:5432/dcf565vdpiuk7n?sslmode=require'
+=======
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://myxbyvdzbwswrh:cd00391eb7d06563800ca77f52337373cbba2f318c5837a6afb5ef8fec13fa73@ec2-54-167-168-52.compute-1.amazonaws.com:5432/dcf565vdpiuk7n?sslmode=require'
+>>>>>>> first commit
 db = SQLAlchemy(app)
 
 class Data(db.Model):
